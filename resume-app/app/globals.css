@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+
+
+@layer base {
+  * {
+    @apply m-0 p-0 text-white ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+  }
+}
+
+.hero {
+  @apply h-screen w-full bg-cover bg-center;
+  background-image: url('../public/background.jpg');
+}
+.logo {
+  @apply text-white text-4xl tracking-1 cursor-pointer
+}
+.btn {
+  @apply bg-rose-600 text-white border-2 border-solid border-transparent font-bold py-2.5 px-6 rounded-3xl hover:scale-125;
+  transition: transform .4s;
+}
+.content {
+  @apply absolute top-1/2;
+  left: 8%;
+  transform: translateY(-50%);
+}
+.firstChild {
+  @apply inline-block w-full pt-3.5 pr-130 pb-3.5 pl-15 border-2 border-solid border-rose-600 outline-none rounded-full;
+}
+.lastChild {
+  @apply absolute inline-block outline-none border-none rounded-3xl bg-rose-600 text-white px-8 py-2 my-auto top-1.5 right-1.5;
+  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+}
+.about {
+  @apply w-full py-25 px-0 bg-custom-gray;
+}
+.about-text {
+  @apply w-150;
+}
+.main {
+  @apply w-500 max-w-95 m-0-auto flex items-center justify-around ;
+}
+.service {
+  @apply bg-display-gray w-full py-25 px-0;
+}
+.box {
+  @apply flex justify-center items-center min-h-400;
+}
+.card {
+  @apply h-86 w-335 py-5 px-8.5 bg-custom-gray rounded-20 m-3.5 relative overflow-hidden text-center;
+}
+.card i {
+  @apply text-50 block text-center my-3 mx-0 text-pink;
+}
+.contact-me {
+  @apply w-full h-73 bg-custom-gray flex items-center flex-col justify-center;
+}
+.contact-me a {
+  @apply bg-rose-600 text-white no-underline border-2 border-solid border-transparent font-bold py-3.5 px-7.5 duration-400 rounded-full hover:bg-transparent hover:border-2 hover:border-solid hover:border-rose-600 hover:cursor-pointer;
+}
+.social  {
+  @apply flex;
+}
+.social a {
+  @apply w-11.5 h-11.5 flex items-center justify-center bg-pink rounded-full my-5.5 mx-2.5 text-white no-underline text-xl hover:scale-135 hover:duration-350;
+}
