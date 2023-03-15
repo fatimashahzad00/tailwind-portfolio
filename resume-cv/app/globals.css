@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+
+
+* {
+  @apply m-0 p-0 box-border font-poppins;
+}
+
+body {
+  @apply flex justify-center items-center min-h-screen bg-sky-300;
+}
+
+
+.container {
+  @apply relative w-full   max-w-100 min-h-1xl grid grid-cols-12 shadow-grey m-12 md:m-10 md:grid-cols-1;
+}
+
+.left-side {
+  @apply relative bg-sky-900 p-10;
+}
+.right-side{
+  @apply relative bg-white p-10;
+}
+.year-company{
+  @apply min-w-150 ;
+}
