@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+}
+.hero {
+  @apply fixed w-full top-0 right-0 flex items-center justify-between py-6 px-28 xl:py-6 xl:px-28 xl:duration-400;
+  z-index: 1000;
+}
+.navmenu a {
+  @apply text-base capitalize font-medium py-2 px-5 transition-all text-amber-700;
+}
+.navmenu a:hover {
+  color: #FF3000;
+}
+.navmenu .active {
+  color: #FF3000;
+}
+.menu-icon {
+  @apply text-4xl cursor-pointer hidden text-amber-700;
+  z-index: 10001;
+}
+
+.main {
+  @apply w-full h-screen bg-center bg-cover grid grid-cols-2 items-center gap-8 xl:py-0 xl:px-28;
+  background-image: url('/bg2.jpg');
+}
+.gradient-text-orange {
+  background: linear-gradient(315deg, #FB8C00 0%, #E53925 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text a {
+  background: linear-gradient(315deg, #FB8C00 0%, #E53925 74%);
+}
+.main-img .img {
+  @apply max-w-full h-auto ;
+  width: 500px;
+  animation-name: slide;
+  animation-duration: 4s;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+
+  0% {
+    transform: translateY(0px)
+  }
+  50% {
+    transform: translateY(-15px)
+  }
+  100% {
+    transform: translateY(0px)
+  }
+}
+
+.arrow {
+  right: 12%;
+}
+
+.arrow a .icon {
+  border-radius: 50%;
+  transition: all .42s;
+}
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+/* @media (max-width: 1315px) {
+  .hero {
+   @apply py-6 px-28 duration-400;
+  } 
+  .main {
+    @apply py-0 px-28;
+  }
+}
+
+@media (max-width: 1195px) {
+  .text h1 {
+    @apply text-5xl duration-300;
+  }
+  .text h5 {
+    @apply text-base duration-300;
+  }
+  .text p {
+    @apply text-xs duration-300;
+  }
+  .main-img .img {
+    @apply max-w-full w-96 h-auto  duration-300;
+  }
+}
+
+@media (max-width: 1055px) {
+  .main {
+    @apply grid-cols-1 h-full ;
+  }
+  .text {
+    @apply pt-24 items-center;
+  }
+  .main-img {
+    @apply items-center;
+  }
+} */
