@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        list-style: none;
+        text-decoration: none;
+    }
+}
+
+/* :root {
+    --main-color: #ff702a; //bg-orange-500
+    --text-color: #fff;  //text-white
+    --bg-color: #1e1c2a;  //bg-grey-900
+    --big-font: 5rem;  //text-7xl
+    --h2-font: 2.25rem;  //text-4xl
+    --p-font: 0.9rem;  //text-base
+} */
+*::selection {
+    @apply bg-orange-500 text-white;
+}
+body {
+    @apply text-white bg-gray-900;
+}
+.header {
+    z-index: 1000;
+    padding-left: 170px;
+    padding-right: 170px;
+}
+.navbar a{
+    transition: .4s;
+}
+
+section {
+    padding: 70px 17%;
+}
+.home {
+    min-height: 90vh;
+}
+.img {
+    width: 600px;
+}
+.about-img .img {
+    width: 480px;
+}
+.s-box .img {
+    width: 90px;
+    margin-left: 83px;
+}
+.cta {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.cta h2 {
+    margin-bottom: 30px;
+}
+.coll h4::before {
+    content: '';
+    height: 2px;
+    width: 50px;
+}
+.coll ul li:not(last-child) {
+    margin-bottom: 15px;
+}
+.coll ul li a:hover {
+    transform: translateX(-12px);
+}
+.coll .social {
+    width: 220px;
+}
+
+@media (max-width: 1140px) {
+    .menu-icon {
+        display: initial;
+    }
+    .header .menu-icon.active {
+        top: 70px;
+    }
+    .header .navbar {
+        top: -400px;
+    }
+}
+
+@media (max-width: 720px) {
+    section {
+        padding: 100px 7%;
+    }
+}
+ 
